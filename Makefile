@@ -19,4 +19,7 @@ gendiff:
 lint:
 	poetry run flake8 gendiff
 
+test:
+	poetry run pytest
+
 #.PHONY: install test lint selfcheck check build
