@@ -23,11 +23,6 @@ def generate_diff(file1, file2):
             result.update({f'- {key}': data1[key]})
         elif key in plus:
             result.update({f'+ {key}': data2[key]})
-#    print(data1)
-#    print(data2)
-#    print(result)
-#    out_file = open('gendiff/out.txt', 'w')
     in_file1.close()
     in_file2.close()
-#    out_file.close()
     return json.dumps(result, indent=2, separators=('', ': ')).replace('"', '')

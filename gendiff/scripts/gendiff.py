@@ -15,7 +15,6 @@ def main():
         help='set format of output'
     )
     args = parser.parse_args()
-#    print(args.first_file, args.second_file)
     print(generate_diff(args.first_file, args.second_file))
 
 
