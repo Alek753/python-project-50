@@ -6,5 +6,5 @@ def parsing(file_path):
     with open(file_path, 'r') as file_in:
         if file_path[-6:].find('.json') > 0:
             return json.load(file_in)
-        elif file_path[-6:].find('.yml') > 0:
+        elif file_path[-6:].find('.yml') > 0 or file_path[-6:].find('.yaml') > 0:
             return yaml.safe_load(file_in)
