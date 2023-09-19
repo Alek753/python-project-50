@@ -1,12 +1,12 @@
 import json
+from gendiff.parsing import parsing
 
 
 def generate_diff(file1, file2):
-    print(file1)
-    in_file1 = open(file1, "r")
-    in_file2 = open(file2, "r")
-    data1 = json.load(in_file1)
-    data2 = json.load(in_file2)
+    data1 = parsing(file1)
+#    print(data1)
+    data2 = parsing(file2)
+#    print(data2)
     all_keys = sorted(data1.keys() | data2.keys())
     same_keys = sorted(data1.keys() & data2.keys())
     minus = sorted(data1.keys() - data2.keys())
@@ -23,6 +23,4 @@ def generate_diff(file1, file2):
             result.update({f'- {key}': data1[key]})
         elif key in plus:
             result.update({f'+ {key}': data2[key]})
-    in_file1.close()
-    in_file2.close()
     return json.dumps(result, indent=2, separators=('', ': ')).replace('"', '')
