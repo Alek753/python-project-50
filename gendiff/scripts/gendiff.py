@@ -15,7 +15,10 @@ def main():
         help='set format of output'
     )
     args = parser.parse_args()
-    print(generate_diff(args.first_file, args.second_file))
+#    print(generate_diff(args.first_file, args.second_file))
+    fo = open('out.txt', 'w')
+    fo.write(generate_diff(args.first_file, args.second_file))
+    fo.close()
 
 
 if __name__ == '__main__':
