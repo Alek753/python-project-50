@@ -12,13 +12,15 @@ def main():
     parser.add_argument(
         '-f',
         '--format',
-        default = 'stylish',
-        choices = ['stylish', 'plain', 'json'],
-        help = 'set format of output'
+        default='stylish',
+        choices=['stylish', 'plain', 'json'],
+        help='set format of output'
     )
     args = parser.parse_args()
     fo = open('out.txt', 'w')
-    fo.write(generate_diff(args.first_file, args.second_file, formatter=args.format))
+    fo.write(generate_diff(args.first_file,
+                           args.second_file,
+                           formatter=args.format))
     fo.close()
 
 

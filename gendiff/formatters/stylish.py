@@ -1,8 +1,8 @@
 import itertools
 
+
 def make_stylish(diff):
     def inner(data, depth=0):
-#        print(diff)
         if not isinstance(data, dict):
             return str(data)
         deep_indent_size = depth + 1

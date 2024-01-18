@@ -1,6 +1,3 @@
-import json
-
-
 def make_diff(data1, data2):
     all_keys = sorted(data1.keys() | data2.keys())
     same_keys = (data1.keys() & data2.keys())
@@ -27,4 +24,3 @@ def make_diff(data1, data2):
             description['new'] = data2[key]
         result[key] = description
     return result
-#    return json.dumps(result, indent=2, separators=('', ': ')).replace('"', '')
