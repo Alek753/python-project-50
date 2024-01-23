@@ -1,6 +1,5 @@
 def make_diff(data1, data2):
     all_keys = sorted(data1.keys() | data2.keys())
-    same_keys = (data1.keys() & data2.keys())
     removed = (data1.keys() - data2.keys())
     added = (data2.keys() - data1.keys())
     result = {}
@@ -12,7 +11,7 @@ def make_diff(data1, data2):
         elif key in added:
             description['operation'] = 'added'
             description['value'] = data2[key]
-        elif key in same_keys and data1[key] == data2[key]:
+        elif data1[key] == data2[key]:
             description['operation'] = 'unchanged'
             description['value'] = data1[key]
         elif isinstance(data1[key], dict) and isinstance(data2[key], dict):
@@ -23,4 +22,5 @@ def make_diff(data1, data2):
             description['prev'] = data1[key]
             description['new'] = data2[key]
         result[key] = description
+    print(result)
     return result
