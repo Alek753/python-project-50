@@ -22,5 +22,5 @@ def make_diff(data1, data2):
             description['prev'] = data1[key]
             description['new'] = data2[key]
         result[key] = description
-    print(result)
+#    print(result)
     return result
