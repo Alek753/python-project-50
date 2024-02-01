@@ -12,3 +12,6 @@
 
 ##Comparation of two yaml files
 [![asciicast](https://asciinema.org/a/w7uoPWP2h58aML2Xlgp7fECgG.svg)](https://asciinema.org/a/w7uoPWP2h58aML2Xlgp7fECgG)
+
+##Making "stylish" format
+[![asciicast](https://asciinema.org/a/rLmuvdxKVb7HG8az3G13RJU1t.svg)](https://asciinema.org/a/rLmuvdxKVb7HG8az3G13RJU1t)
