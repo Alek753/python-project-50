@@ -15,3 +15,6 @@
 
 ##Making "stylish" format
 [![asciicast](https://asciinema.org/a/rLmuvdxKVb7HG8az3G13RJU1t.svg)](https://asciinema.org/a/rLmuvdxKVb7HG8az3G13RJU1t)
+
+##Making "plain" format
+[![asciicast](https://asciinema.org/a/ck0DOdXULvVpKZcVVtwXnxz6L.svg)](https://asciinema.org/a/ck0DOdXULvVpKZcVVtwXnxz6L)
