@@ -10,6 +10,18 @@ FIXTURES_PATH = f'{os.path.dirname(__file__)}/fixtures'
     (
         f'{FIXTURES_PATH}/file1.json',
         f'{FIXTURES_PATH}/file2.json',
+        f'{FIXTURES_PATH}/expected_for_json.txt',
+        "json"
+    ),
+    (
+        f'{FIXTURES_PATH}/file1.yml',
+        f'{FIXTURES_PATH}/file2.yml',
+        f'{FIXTURES_PATH}/expected_for_json.txt',
+        "json"
+    ),
+    (
+        f'{FIXTURES_PATH}/file1.json',
+        f'{FIXTURES_PATH}/file2.json',
         f'{FIXTURES_PATH}/expected_for_plain.txt',
         "plain"
     ),
