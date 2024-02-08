@@ -18,3 +18,6 @@
 
 ##Making "plain" format
 [![asciicast](https://asciinema.org/a/ck0DOdXULvVpKZcVVtwXnxz6L.svg)](https://asciinema.org/a/ck0DOdXULvVpKZcVVtwXnxz6L)
+
+##Making "json" format
+[![asciicast](https://asciinema.org/a/5Wv8yt7z90OKWg2eHYQBOO0W7.svg)](https://asciinema.org/a/5Wv8yt7z90OKWg2eHYQBOO0W7)
