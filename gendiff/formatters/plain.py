@@ -5,6 +5,8 @@ def make_string(current_data):
         return str(current_data).lower()
     if current_data is None:
         return 'null'
+    if isinstance(current_data, int):
+        return current_data
     return f"'{str(current_data)}'"
 
 
