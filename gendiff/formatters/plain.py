@@ -10,7 +10,7 @@ def make_string(current_data):
     return f"'{str(current_data)}'"
 
 
-def inner(data, node=''):
+def make_plain(data, node=''):
     result = []
     for key, value in data.items():
         node_name = f"{node}{value['key']}"
@@ -25,9 +25,7 @@ def inner(data, node=''):
                           f"From {make_string(value['prev'])} "
                           f"to {make_string(value['new'])}")
         if value['operation'] == 'nested':
-            result.append(inner(value['value'], f"{node_name}."))
+            result.append(make_plain(value['value'], f"{node_name}."))
+        if result == []:
+            raise ValueError('Unknown operation type!')
     return '\n'.join(result)
-
-
-def make_plain(diff):
-    return inner(diff)

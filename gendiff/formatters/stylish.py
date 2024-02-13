@@ -23,7 +23,7 @@ def form_data(indent, data, key, depth):
            f"{make_string(data[key], depth + 1)}"
 
 
-def inner(data, depth=1):
+def make_stylish(data, depth=1):
     deep_indent = REPLACER * (depth * 4 - 2)
     lines = []
     for value in data.values():
@@ -42,11 +42,9 @@ def inner(data, depth=1):
             continue
         if value['operation'] == 'nested':
             lines.append(f"{deep_indent}  {value['key']}: "
-                         f"{inner(value['value'], depth + 1)}")
+                         f"{make_stylish(value['value'], depth + 1)}")
             continue
+        if lines == []:
+            raise ValueError('Unknown operation type!')
     result = itertools.chain("{", lines, [REPLACER * (depth - 1) * 4 + "}"])
     return "\n".join(result)
-
-
-def make_stylish(diff):
-    return inner(diff, 1)

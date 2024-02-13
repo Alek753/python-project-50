@@ -20,11 +20,6 @@ def main():
     print(generate_diff(args.first_file,
                         args.second_file,
                         formatter=args.format))
-    fo = open('out.txt', 'w')
-    fo.write(generate_diff(args.first_file,
-                           args.second_file,
-                           formatter=args.format))
-    fo.close()
 
 
 if __name__ == '__main__':
