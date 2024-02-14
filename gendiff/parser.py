@@ -5,7 +5,11 @@ import yaml
 def read_data(file_path):
     ext = file_path.split('.')[-1]
     with open(file_path, 'r') as file_in:
-        return parse(file_in.read(), ext)
+        data = file_in.read()
+    if data == '':
+        raise ValueError(f"File '{file_path}' is epmty!")
+    else:
+        return parse(data, ext)
 
 
 def parse(data, ext):
